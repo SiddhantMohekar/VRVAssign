@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #73a5ff, #5478ff);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .home-container {
+            background: #fff;
+            color: #333;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #5478ff;
+        }
+
+        a {
+            display: inline-block;
+            background: #5478ff;
+            color: #fff;
+            padding: 10px 15px;
+            margin: 10px 0;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background 0.3s;
+            font-weight: bold;
+        }
+
+        a:hover {
+            background: #4058d6;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        input[type="submit"] {
+            background: #f44336;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background: #d32f2f;
+        }
+    </style>
+</head>
+<body>
+    <div class="home-container">
+        <h2>Coupon Home</h2>
+        <a href="/showCreateEvent">Create Event</a><br />
+        <a href="/showGetEvent">Get Event</a><br />
+        <form name="logoutForm" th:action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out" />
+        </form>
+    </div>
+</body>
+</html>
